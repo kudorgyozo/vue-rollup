@@ -4,7 +4,7 @@
     "description": "",
     "main": "src/main.ts",
     "browserslist": [
-        "ie11",
+        "ie 11",
         "last 1 version"
     ],
     "scripts": {

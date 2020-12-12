@@ -1,7 +1,5 @@
 <template>
   <h1>Hello VUe {{ counter }}</h1>
-
-  <div class="szar">grid</div>
 </template>
 
 <script lang='ts'>

@@ -7,8 +7,8 @@ import html2 from 'rollup-plugin-html2';
 import serve from "rollup-plugin-serve";
 import livereload from "rollup-plugin-livereload";
 import scss from 'rollup-plugin-scss';
-import postcss from "rollup-plugin-postcss";
-import autoprefixer from 'autoprefixer'
+import postcss from "postcss";
+import autoprefixer from 'autoprefixer';
 
 export default [
     {
@@ -37,7 +37,7 @@ export default [
             //scss({ output: 'dist/bundle.css'}),
             scss({
                 output: 'dist/bundle.css',
-                //processor: css => postcss(),
+                processor: css => postcss([autoprefixer({ grid: true})]),
             }),
             vue(),
             typescript(),
